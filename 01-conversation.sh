@@ -1,5 +1,7 @@
 #!/bin/bash
-echo "krish: Hi"
-echo "pasha: Hi mama"
-echo "krish: yela unnav mawa"
-echo "pasha: fine mawa"
+PERSON1=Rohith
+PERSON2=Virat
+echo "PERSON1: Hi"
+echo "PERSON2: Hi mama"
+echo "PERSON1: yela unnav mawa"
+echo "PERSON2: fine mawa"
