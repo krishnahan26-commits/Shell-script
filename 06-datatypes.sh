@@ -10,3 +10,5 @@ echo "The sum of $number1 and $number2 : $SUM"
 TIMESTAMP=$(date)
 
 echo "Script exicuted at : $TIMESTAMP"
+
+#addtion of two numbers
