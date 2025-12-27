@@ -5,7 +5,7 @@ $NUMBER2=$2
 
 SUM=$(($NUMBER1+$NUMBER2))
 
-echo "The sum of $number1 and $number2 : $SUM"
+echo "The sum of $NUMBER1 and $NUMBER2 : $SUM"
 
 TIMESTAMP=$(date)
 
