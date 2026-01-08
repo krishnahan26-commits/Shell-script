@@ -33,7 +33,7 @@ then
     dnf install mysql -y &>>$LOG_FILE_NAME
     VALIDATE $? "Installing MySQL"
 else
-    echo -e "MySQL is already $Y installed"
+    echo -e "MySQL is already installed"
 fi
 
 dnf list intalled git &>>$LOG_FILE_NAME
