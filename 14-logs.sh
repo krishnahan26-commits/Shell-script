@@ -1,6 +1,9 @@
 #!/bin/bash
 
 USERID=$(id -u)
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
 LOGS_FOLDER="/var/log/shell-script-logs"
 LOG_FILE=$( echo $0 | cut -d "." -f1 )
 TIMESTAMP=$( date +%Y-%m-%d-%H-%M-%S )
@@ -8,10 +11,10 @@ LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE/$TIMESTAMP.log"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e "$2 .... FAILURE"
+        echo -e "$2 ....$R FAILURE"
         exit 1
     else
-        echo -e "$2 ....  SUCCESS"
+        echo -e "$2 .... $G SUCCESS"
     fi
 }
 
@@ -30,7 +33,7 @@ then
     dnf install mysql -y &>>$LOG_FILE_NAME
     VALIDATE $? "Installing MySQL"
 else
-    echo -e "MySQL is already installed"
+    echo -e "MySQL is already $Y installed"
 fi
 
 dnf list intalled git &>>$LOG_FILE_NAME
@@ -40,6 +43,6 @@ then
     dnf install git -y &>>$LOG_FILE_NAME
     VALIDATE $? "Installing git"
 else
-    echo "Git is already installed"
+    echo "Git is already $Y installed"
 fi
 
